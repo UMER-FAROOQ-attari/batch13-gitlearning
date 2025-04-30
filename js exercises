@@ -1,2 +1,124 @@
 The link is for "A Smarter Way to Learn JavaScript," a site with interactive exercises to help you learn JavaScript. It offers step-by-step practice for beginners.
 https://asmarterwaytolearn.com/js/index-of-exercises.html
+// let arr = [2,3,4,5,6,7,8,9,10]
+// let sqr = [];
+// for (i=0;i<arr.length;i++){
+//           arr[i]*2
+//     sqr.push[i]
+// }   
+// document.write(sqr)
+let arr = [2,3,4,5,6,7,8,9,10]
+let sqr =  arr.map(num => num* num)
+let cube =  arr.map(num => num* num* num )
+console.log(`original arry : ${arr}
+    sqr arry : ${sqr}
+    cube arry : ${cube} `)
+function findExpval(arr , pow){
+    return arr.map(num => num ** pow);
+}
+let exparr = findExpval(arr,4)
+console.log(`EXPONENTAIL Array : ${exparr}`)
+let pkr = [50000, 70000 , 90000, 17500 , 20000, 30000];
+function findExpval(pkr , pow){
+    return pkr.map(num => num / pow);
+}
+let pkrtousd = findExpval(pkr,281)
+console.log(`USD dollr : ${pkrtousd}`)
+
+function findExpval(pkr , pow){
+    return pkr.map(num => num / pow);
+}
+let pkrtogold= findExpval(pkr,31409)
+console.log(` gold : ${pkrtogold}`)
+ 
+function findExpval(pkr , pow){
+    return pkr.map(num => num / pow);
+}
+let pkrtoaed= findExpval(pkr,76.5)
+console.log(`Aed : ${pkrtoaed}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let arrr = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let squares = arrr.map(num => num * num);
+
+let cubes = arrr.map(num => num * num * num);
+
+console.log(`Original Array: [${arrr}]`);
+console.log(`Squared Array: [${squares}]`);
+console.log(`Cubed Array: [${cubes}]`);
+
+function findExpVal(arrr, pow) {
+    return arrr.map(num => num ** pow);
+}
+
+let expArr = findExpVal(arrr, 4);
+console.log(`Exponential Array: [${expArr}]`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+let pkrr = [50000, 70000, 90000, 17500, 20000, 30000];
+let pkrToUsd = 281;
+let pkrToGold = 31409;
+let pkrToAed = 76.5;
+
+function pkrConverter(pkrr, currency) {
+    let rate;
+    switch (currency) {
+        case "AED":
+            rate = pkrToAed;
+            break;
+        case "Gold":
+            rate = pkrToGold;
+            break;
+        default:
+            rate = pkrToUsd;
+            break;
+    }
+    return pkrr.map(amount => (amount / rate).toFixed(2));
+}
+
+let usd = pkrConverter(pkrr, "USD");
+let gold = pkrConverter(pkrr, "Gold");
+let aed = pkrConverter(pkrr, "AED");
+
+console.log(`USD: [${usd}]`);
+console.log(`Gold: [${gold}]`);
+console.log(`AED: [${aed}]`);
